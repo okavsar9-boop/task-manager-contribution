@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task Manager | Harun Burkut</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="layout">
+    <header class="header">
+      <div><span class="eyebrow">VISTULA UNIVERSITY · TEAM PROJECT – IT</span><h1>Task Manager<span class="accent">.</span></h1><p>Organize your tasks and keep your progress in one place.</p></div>
+      <div class="student"><span>Created by</span><strong>Harun Burkut</strong><span>Student ID: <b id="student-id">64613</b></span></div>
+    </header>
+    <section class="stats" aria-label="Task summary">
+      <div class="stat"><span>Total tasks</span><strong id="total-count">0</strong></div>
+      <div class="stat"><span>In progress</span><strong id="pending-count">0</strong></div>
+      <div class="stat"><span>Completed</span><strong id="complete-count">0</strong></div>
+    </section>
+    <div class="columns">
+      <section class="panel form-panel"><div class="section-top"><div><span class="eyebrow">TASK DETAILS</span><h2 id="form-heading">Create a task</h2></div><span class="form-symbol">＋</span></div>
+        <form id="task-form"><label for="task-title">Task title <em>*</em></label><input id="task-title" name="title" maxlength="160" required placeholder="e.g. Complete JavaScript assignment"><label for="task-description">Description</label><textarea id="task-description" name="description" rows="5" placeholder="Add details about your task..."></textarea><button id="task-submit" class="primary" type="submit">Add Task <span aria-hidden="true">→</span></button><button id="cancel-edit" class="secondary hidden" type="button">Cancel editing</button></form>
+      </section>
+      <section class="panel tasks-panel"><div class="section-top"><div><span class="eyebrow">YOUR WORKSPACE</span><h2>My tasks</h2></div><button class="refresh" id="refresh-tasks" type="button" title="Refresh tasks">↻ Refresh</button></div><div id="status-message" role="status" aria-live="polite"></div><div id="task-list" aria-live="polite"><div class="empty">Loading tasks...</div></div></section>
+    </div>
+    <footer><span>© 2026 Harun Burkut · Student ID 64613</span><a href="contribution.html" id="contribution-link">Team Contribution <span aria-hidden="true">↗</span></a></footer>
+  </main>
+</body>
+</html>
